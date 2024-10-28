@@ -72,7 +72,7 @@ async function WAStart() {
         if (!message?.read) { 
           await client.readMessages([m.key]);
           setTimeout(() => {
-            console.log("Berhasil melihat status", m.pushName, m.key.participant.split('@')[0]);
+            console.log(`Berhasil melihat status (${m.pushName}) ${m.key.participant.split('@')[0]}`); // Perbaikan di sini
           }, 1000); // 1000 milliseconds = 1 second
         }
       }
